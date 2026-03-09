@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AI Video Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>AI Video Studio</h1>
+<p>Create AI Motion Videos Instantly</p>
+</header>
+
+<div class="tools">
+
+<button onclick="showTool('motion')">
+Image → Motion Video
+</button>
+
+<button onclick="showTool('text')">
+Text → Video
+</button>
+
+<button onclick="showTool('talk')">
+Talking Photo
+</button>
+
+</div>
+
+
+<div id="motionTool" class="toolBox">
+
+<h2>Image To Motion Video</h2>
+
+<input type="file" id="motionImage">
+
+<textarea id="motionPrompt"
+placeholder="Example: cinematic camera pan, walking forward, wind motion">
+</textarea>
+
+<button onclick="generateMotion()">Generate Motion Video</button>
+
+<video id="motionResult" controls></video>
+
+</div>
+
+
+
+<div id="textTool" class="toolBox">
+
+<h2>Text To AI Video</h2>
+
+<textarea id="textPrompt"
+placeholder="Example: futuristic city cinematic drone shot">
+</textarea>
+
+<button onclick="generateTextVideo()">Generate Video</button>
+
+<video id="textResult" controls></video>
+
+</div>
+
+
+
+<div id="talkTool" class="toolBox">
+
+<h2>AI Talking Photo</h2>
+
+<input type="file" id="talkImage">
+
+<textarea id="talkText"
+placeholder="Enter speech text">
+</textarea>
+
+<button onclick="generateTalking()">Generate Talking Video</button>
+
+<video id="talkResult" controls></video>
+
+</div>
+
+
+<script src="app.js"></script>
+<script src="tools.js"></script>
+
+</body>
+
+</html>
